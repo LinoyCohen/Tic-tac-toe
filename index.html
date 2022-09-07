@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="variables.js"></script>
+  <script src="game.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+
+
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <div class="welcome">
+    <h1 id="welcome-title" align="center">Welcome to Tic-Tac-Toe Game!</h1>
+    <table id="score-board" align="center">
+      <tr>
+        <td id="x"> Player X </td>
+        <td width="30"> &nbsp; </td>
+        <td id="o"> Player O </td>
+      </tr>
+      <tr>
+        <td class="score" id="player1" align="center">0 </td>
+        <td> &nbsp; </td>
+        <td class="score" id="player2" align="center">0 </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="game">
+    <div class="grid-cell" data-value="0"></div>
+    <div class="grid-cell" data-value="1"></div>
+    <div class="grid-cell" data-value="2"></div>
+    <div class="grid-cell" data-value="3"></div>
+    <div class="grid-cell" data-value="4"></div>
+    <div class="grid-cell" data-value="5"></div>
+    <div class="grid-cell" data-value="6"></div>
+    <div class="grid-cell" data-value="7"></div>
+    <div class="grid-cell" data-value="8"></div>
+  </div>
+
+  <div class="game-over">
+    <a class="game-over-text"></a>
+    <button class="restart">Start New Game</button>
+  </div>
+
+  <div class="container-undo">
+    <button id="undo" class="undo-btn" type="button">Undo ↶</button>
+  </div>
+
+  <div class="container-reset">
+      <button class="reset-btn" type="button">Start Over ↻</button>
+  </div>
+
+</body>
+<footer>© Developed by Linoy Cohen 2022</footer>
+
+</html>

@@ -1,0 +1,200 @@
+body {
+  background-color: #FCF8E8;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  color: #CEE5D0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#undo {
+  background-color: #94B49F;
+  height: 35px;
+  font-size: 16px;
+}
+
+#game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+#welcome-title {
+  color: #94B49F;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 992px) {
+  #welcome-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #welcome-title {
+    font-size: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #score-board {
+    font-size: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #game {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #game {
+    width: auto;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+.grid-cell {
+  border: 1px solid #94B49F;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.grid-cell:not(.disabled):hover {
+  background: #F1DDBF;
+}
+
+.grid-cell:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.grid-cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.grid-cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.grid-cell:nth-last-of-type(-n + 3) {
+  border-bottom: none;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.highlighted {
+  box-shadow: 0 0 7px #ccc;
+  border-radius: 10px;
+}
+
+.x::after {
+  content: '\2717';
+  color: #ECB390;
+}
+
+.o::after {
+  content: '\004F';
+  color: #ECB390;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.container-reset {
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+  color: #CEE5D0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.container-undo {
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+  color: #CEE5D0;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.invisivible {
+  display: none;
+}
+
+.reset-btn, .undo-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: #ECB390;
+  color: #FCF8E8;
+}
+
+.reset-btn:hover, .undo-btn:hover {
+  opacity: 0.8;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
+  text-align: center;
+}
+
+.game-over-text {
+  position: fixed;
+  color: #FCF8E8;
+  top: -300px;
+  font-size: 50px;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+}
+
+.restart {
+  border: none;
+  line-height: 35px;
+  font-size: 15px;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: #FCF8E8;
+  cursor: pointer;
+  color: #94B49F;
+}
+
+.visible {
+  display: block;
+}
+
+.welcome {
+  color: #ECB390;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 25px;
+  line-height: 40px;
+}
