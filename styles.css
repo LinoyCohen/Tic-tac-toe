@@ -55,9 +55,36 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  #score-board {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-cell {
+    display: absolute;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #undo {
+    height: 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   #game {
-    width: auto;
-    height: auto;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-undo {
+    height: 100px;
   }
 }
 
@@ -65,7 +92,6 @@ footer {
   #game {
     width: auto;
     height: auto;
-    z-index: 1;
   }
 }
 
